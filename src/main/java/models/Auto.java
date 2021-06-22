@@ -24,7 +24,7 @@ public class Auto {
         this.model = model;
         this.color = color;
     }
-
+//12
     public int getId() {
         return auto_id;
     }
