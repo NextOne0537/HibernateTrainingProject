@@ -19,8 +19,9 @@ public class Main {
 //        userService.updateUser(person);
 //        person.setName("Sasha");
 //        userService.updateUser(person);
-        Person toDelete = userService.findUser(1);
-        userService.deleteUser(toDelete);
+//        Person toDelete = userService.findUser(1);
+        userService.deleteUser(userService.findUser(2));
+        userService.deleteUser(userService.findUser(3));
 
     }
 }

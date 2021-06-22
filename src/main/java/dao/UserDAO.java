@@ -43,8 +43,10 @@ public class UserDAO {
     }
 
     public Auto findAutoById (int id){
-
-        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Auto.class,id);
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        Auto result = session.get(Auto.class,id);
+        session.close();
+        return result;
     }
 
     public List<Person> findAllUsers (){
