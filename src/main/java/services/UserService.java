@@ -2,7 +2,7 @@ package services;
 
 import dao.UserDAO;
 import models.Auto;
-import models.User;
+import models.Person;
 
 import java.util.List;
 
@@ -13,23 +13,23 @@ public class UserService {
     public UserService(){
 
     }
-    public User findUser(int id){
+    public Person findUser(int id){
         return userDAO.findById(id);
     }
 
-    public void saveUser(User user){
-        userDAO.save(user);
+    public void saveUser(Person person){
+        userDAO.save(person);
     }
 
-    public void deleteUser(User user){
-        userDAO.delete(user);
+    public void deleteUser(Person person){
+        userDAO.delete(person);
     }
 
-    public void updateUser (User user){
-        userDAO.update(user);
+    public void updateUser (Person person){
+        userDAO.update(person);
     }
 
-    public List<User> findAllUsers () {
+    public List<Person> findAllUsers () {
         return userDAO.findAllUsers();
     }
 
