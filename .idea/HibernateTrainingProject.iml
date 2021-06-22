@@ -5,7 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="HibernateTrainingProject" />
+          <factory-entry name="HibernateTrainingProject" value="8c1b9d9f-c160-462f-8b9c-8dad60d53e59" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

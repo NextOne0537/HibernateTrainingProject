@@ -9,19 +9,17 @@ public class Main {
 
 
         UserService userService = new UserService();
-//        Person person = new Person("Masha",26);
-//        userService.saveUser(person);
-//        Auto ferrari = new Auto("Ferrari", "red");
-//        person.addAuto(ferrari);
-//        Auto ford = new Auto("Ford", "black");
-//        ford.setPerson(person);
-//        person.addAuto(ford);
-//        userService.updateUser(person);
-//        person.setName("Sasha");
-//        userService.updateUser(person);
-//        Person toDelete = userService.findUser(1);
-        userService.deleteUser(userService.findUser(2));
-        userService.deleteUser(userService.findUser(3));
+        Person person = new Person("Masha",26);
+        userService.saveUser(person);
+        Auto ferrari = new Auto("Ferrari", "red");
+        person.addAuto(ferrari);
+        Auto ford = new Auto("Ford", "black");
+        ford.setPerson(person);
+        person.addAuto(ford);
+        userService.updateUser(person);
+        person.setName("Sasha");
+        userService.updateUser(person);
+
 
     }
 }
