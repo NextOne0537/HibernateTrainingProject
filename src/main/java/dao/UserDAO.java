@@ -11,11 +11,11 @@ import java.util.List;
 
 public class UserDAO {
 
-    public Person findById(int id){
+    public Person findById(int id) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Person result = session.get(Person.class,id);
+        Person person = session.get(Person.class,id);
         session.close();
-        return result;
+        return person;
 //        return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(Person.class,id);
     }
 

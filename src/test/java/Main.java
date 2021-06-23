@@ -1,9 +1,11 @@
 import models.Auto;
 import models.Person;
+import org.checkerframework.checker.units.qual.A;
 import services.UserService;
 import utils.HibernateSessionFactoryUtil;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
@@ -25,7 +27,11 @@ public class Main {
 //        userService.updateUser(person);
 //       toChange.removeAuto(userService.findAuto(1));
 //       toChange.removeAuto(userService.findAuto(2));
-        System.out.println(userService.findUser(7));
+        Auto auto = userService.findAuto(10);
+        Person person = userService.findUser(7);
+        person.addAuto(auto);
+        userService.updateUser(person);
+
 
 
 

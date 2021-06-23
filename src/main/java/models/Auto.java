@@ -3,20 +3,20 @@ package models;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "autos")
+@Table(name = "autos")
 public class Auto {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int auto_id;
 
     private String model;
     private String color;
 
-    @ManyToOne (fetch = FetchType.LAZY)
-    @JoinColumn (name = "user_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
     private Person person;
 
-    public Auto(){
+    public Auto() {
 
     }
 
@@ -55,6 +55,6 @@ public class Auto {
 
     @Override
     public String toString() {
-        return color+" "+ person;
+        return color + " " + model;
     }
 }

@@ -16,7 +16,7 @@ public class Person {
     private String name;
     private int age;
 
-    @OneToMany(mappedBy = "person",cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "person",cascade = CascadeType.ALL, orphanRemoval = true )
     private List<Auto> autos;
 
     public Person(){}
