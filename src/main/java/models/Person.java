@@ -1,5 +1,7 @@
 package models;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +27,7 @@ public class Person {
         autos = new ArrayList<Auto>();
     }
 
-    public void addAuto(Auto auto){
+    public void addAuto(@NotNull Auto auto){
         auto.setPerson(this);
         autos.add(auto);
     }

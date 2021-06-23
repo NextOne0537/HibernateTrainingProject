@@ -3,6 +3,7 @@ package services;
 import dao.UserDAO;
 import models.Auto;
 import models.Person;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -36,6 +37,8 @@ public class UserService {
     public Auto findAuto (int id){
         return userDAO.findAutoById(id);
     }
+
+//    public Query query (String query) {return userDAO.createQuery(query);}
 
 
 

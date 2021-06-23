@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateSessionFactoryUtil;
 
+import org.hibernate.query.Query;
 import java.util.List;
 
 public class UserDAO {
@@ -50,8 +51,18 @@ public class UserDAO {
     }
 
     public List<Person> findAllUsers (){
-        List <Person> people = (List<Person>) HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From Person").list();
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        List <Person> people = (List<Person>) session.createQuery("From Person").list();
+        session.close();
         return people;
     }
+
+//    public Query createQuery (String queryString){
+//        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+//        Query query = session.createQuery(queryString);
+//        session.close();
+//        return query;
+//
+//    }
 
 }

@@ -1,7 +1,6 @@
 import models.Auto;
 import models.Person;
 import services.UserService;
-
 import java.sql.SQLException;
 
 public class Main {
@@ -17,7 +16,7 @@ public class Main {
         ford.setPerson(person);
         person.addAuto(ford);
         userService.updateUser(person);
-        person.setName("Sasha");
+        person.setName("Roma");
         userService.updateUser(person);
 
 
